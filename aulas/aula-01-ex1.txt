@@ -1,0 +1,163 @@
+Exercício 03
+
+1---------------------
+Letra C vai receber o valor da operação A+B multiplicado por B. E enseguida sera apresentada na tela.
+
+ALGORITMO Valor_de_C
+VAR
+	Real: A, B, C
+INICIO
+	ESCREVA("Informe o valor de A: ");
+	LEIA(A);
+
+	ESCREVA("Informe o valor de B: ");
+	LEIA(B);
+
+	C <- (A+B)*B;
+	ESCREVA("O valor de C é: ", C);
+
+FIM
+
+2---------------------
+Média Ponderada entre 3 notas
+
+ALGORITMO media_ponderada
+VAR
+	Real: n1, n2, n3, p1, p2, p3, ponderada;
+INICIO
+	ESCREVA("Informe a primeira nota: ");
+	LEIA(n1);
+	ESCREVA("Informe a segunda nota: ");
+	LEIA(n2);
+	ESCREVA("Informe a terceira nota: ");
+	LEIA(n3);
+
+	ESCREVA("Informe o peso 1: ");
+	LEIA(p1);
+	ESCREVA("Informe o peso 2: ");
+	LEIA(p2);
+	ESCREVA("Informe o peso 3: ");
+	LEIA(p3);
+
+	ponderada <- (n1*p1 + n2*p2 + n3*p3) / (p1+p2+p3);
+	ESCREVA("A média ponderada do aluno é: ", ponderada);
+	
+FIM
+
+3---------------------
+Área de um triângulo
+
+ALGORITMO area_triangulo
+VAR
+	Real: base, altura, area
+INICIO
+	ESCREVA("Informe a base: ");
+	LEIA(base);
+	ESCREVA("Informe a altura: ");
+	LEIA(altura);
+	area <- base*altura / 2;
+	ESCREVA("A área do triângulo é: ", area, "m²");
+FIM
+
+4---------------------
+AlGORITMO celsius_para_fahrenheit
+VAR
+	REAL: celsius, fahrenheit;
+INICIO
+	ESREVA("Informe a temperatura em graus Celsius: ");
+	LEIA("celsius");
+	fahrenheit <- celsius * 9 / 5 + 32;
+	ESCREVA(celsius, "ºc equivale a ", fahrenheit, "Fahrenheit");
+FIM
+
+5---------------------
+ALGORITM volume_cilindro
+VAR
+	REAL: raio, alt, volume
+INICIO
+	ESCREVA("Informe o raio: ");
+	LEIA(raio);
+	ESCERVA("Informe a altura: ");
+	LEIA(alt);
+	volume <- 3.14 * pot(raio,2) * alt;
+	ESCREVA("O volume do cilindro é: " volume);
+FIM
+
+6---------------------
+ALGORITMO consumo_combustivel
+VAR
+	REAL: tempo, velocidade, litros;
+INICIO
+	ESCREVA("Informe o tempo da viagem em hora(s): ");
+	LEIA(tempo);
+	ESCREVA("Informe a velocidade média: ");
+	LEIA(velocidade);
+	litros <- tempo*velocidade / 12;
+	ESCREVA("Foi gasto nesta viagem ", litros, "litros de combustível");	
+FIM
+
+7---------------------
+ALGORITMO multa_atraso
+VAR
+	REAL: saldo_devedor, saldo_final, percent;
+INICIO
+	ESCREVA("Informe o saldo devedor: ");
+	LEIA(saldo_devedor);
+	saldo_final <- saldo_devedor + (percent / 100) * saldo_devedor;
+	ESCREVA("O valor acrescido de ", percent, "% ficou em: ", saldo_final);
+FIM  // utilizado os parê nteses na porcentagem apenas para separar, não é necessário//
+ou   saldo_final <- valdo_devedor * (1+ percent);
+
+8---------------------
+ALGORITMO troca_de_valores
+VAR
+	INTERIRO: n1, n2, troca;
+INICIO
+	ESCREVA("Informe o primeiro número ");
+	LEIA(n1);
+	ESCREVA("Informe o segundo número ");
+	LEIA(n2);
+
+	troca <- n1 ;
+	n1 <- n2;
+	n2 <- troca;	
+	ESCREVA("O valor do primeiro número agora é: " n1, "e o valor do seundo número virou ", n2);
+FIM
+
+
+
+
+9---------------------
+ALGORITMO reais_para_dolar
+VAR
+	REAL: reais, dolar, cambio;
+INICIO
+	ESCREVA("Informe o valor em reais:");
+	LEIA(reais);
+	ESCREVA("Informe o valor o valor do cambio do dia: ");
+	LEIA(cambio);
+	dolar <- reais/cambio;
+	ESCREVA("A conversão fica em: ", dolar, "dolar(es)");
+FIM
+
+
+10---------------------
+ALGORITMO resultado_espressao
+VAR
+	INTEIRO: a, b, c, r, s;	
+	REAL: d;
+INICIO
+	ESCREVA("Informe o primeiro número");
+	LEIA(a);
+	ESCREVA("Informe o segundo número");
+	LEIA(b);
+	ESCREVA("Informe o terceiro número");
+	LEIA(c);
+	s <- POT(b+c, 2);
+	r <- POT(a+b, 2);
+	d <- (r+s)/2;
+	ESCREVA("O valor da espressão é: d=", d);
+
+FINAL
+
+

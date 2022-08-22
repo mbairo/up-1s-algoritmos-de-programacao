@@ -1,0 +1,273 @@
+ALGORITMO exercicio06
+
+VAR
+	INTEIRO: num1, num2;
+INICIO
+	ESCREVA("Informe um número: ")
+	LEIA(num1);
+	ESCREVA("Informe um número: ")
+	LEIA(num2);
+
+	ESCREVA("Maior número: ", maior(num1, num2));
+FIM
+
+FUNÇÃO INTEIRO maior(INTEIRO: num1, INTEIRO: num2)
+INICIO
+	SE(n1>n2)ENTÃO
+		RERORNE n1;
+	SENÃO
+		RETORNE n2;
+	FIM_SE
+FIM
+
+=========================================================================================================================================================
+
+
+ALGORITMO exercicio06
+
+VAR
+	INTEIRO: num1, num2, num3;
+INICIO
+	ESCREVA("Informe um número: ")
+	LEIA(num1);
+	ESCREVA("Informe um número: ")
+	LEIA(num2);
+	ESCREVA("Informe um número: ")
+	LEIA(num3);
+	
+
+	ESCREVA("Maior número: ", maior(num1, num2, num3));
+FIM
+
+FUNÇÃO INTEIRO maior(INTEIRO: n1, INTEIRO: n2, INTEIRO: n3);   5  7 2
+
+VAR 
+	n_maior
+INICIO
+	SE(n1 >=n2 E n1 >=n3 )ENTÃO
+		n_maior<- n1;
+		SENÃO SE(n2 >= n1 E n2>= n3)ENTÃO
+			n_maior <- n2;
+		SENÃO
+			n_maior <- n3;
+		FIM_SE
+	FIM_SE
+	RETORNE n_maior
+FIM
+
+=========================================================================================================================================================
+ALGORITMO exercicio08
+	
+VAR
+	INTEIRO: nota1, nota2, nota3;	
+	CARACTERE: op;
+
+INICIO
+	ESCREVA("Informe a primeira nota: ");
+	LEIA(nota1);
+	
+	ESCREVA("Informe a segunda nota: ");
+	LEIA(nota2);
+	
+	ESCREVA("Informe a terceira nota: ");
+	LEIA(nota3);	
+	
+	ESCREVA("Informe a letra(A para Aritimética e P para ponderada): ")
+	LEIA(opcao);
+	
+	ESCREVA("A média das notas do aluna é: ", media(nota1, nota2, nota3, op));	
+FIM
+
+FUNÇÃO REAL media(REAL: nota1, REAL: nota2, REAL: nota3, CARACTER: op)
+INICIO
+	SE(opcao = "A") ENTÃO
+		RETORNE: (nota1 + nota2 + nota3) /3;
+		SENÃO SE(opcao = "P")
+			RETORNE: (nota1 * 5 + nota2 * 3 + nota3 * 2)/10;
+		FIM_SE
+	FIM_SE
+FIM
+
+Vetor e matriz prova! dia 30!!! sem modulação e registro.
+
+=========================================================================================================================================================
+=========================================================================================================================================================
+=========================================================================================================================================================
+REGISTROS
+
+
+REGISTRO: tipo_pessoas
+CARACTERE: nome, cidade;
+REAL: idade;
+FIM_REGISTRO
+
+ALGORITMO ex1
+VAR
+	tipo.pessoas: pessoa;
+INICIO
+	ESCREVA("Informe seu nome");
+	LEIA(pessoa.nome);
+	ESCREVA("Informe sua idade");
+	LEIA(pessoa.idade);
+	ESCREVA("Informe sua cidade");
+	LEIA(pessoa.cidade);
+
+	ESCREVA("Nome: ", pessoa.nome); 
+        ESCREVA("Cidade: ", pessoa.cidade); 
+        ESCREVA("Idade: ", pessoa.idade); 
+FIM
+=========================================================================================================================================================
+
+REGISTRO: tipo_alunos
+CARACTERE: nome, disciplina;
+REAL: nota1, nota2;
+FIM_REGISTRO
+
+ALGORITMO ex2
+VAR
+	tipo_alunos: aluno[3];
+	REAL: media, maior_media;
+	INTEIRO: cont;
+INICIO
+	
+	maior_media <- 0;
+
+
+	PARA(cont <-0; cont <3; cont <- cont +1)FAÇA
+
+		ESCREVA("Informe seu nome: ");
+		LEIA(aluno[cont].nome);
+	
+		ESCREVA("Informe a diciplina: ");
+		LEIA(aluno[cont].disciplina);
+
+		ESCREVA("Informe sua primeira nota: ");
+		LEIA(aluno[cont].nota1);
+
+		ESCREVA("Informe sua segunda nota: ");
+		LEIA(aluno[cont].nota2);
+	
+		media <- (aluno[cont].nota1+aluno[cont].nota2) / 2;
+		
+		SE(media > maior_media)ENTÃO
+			maior_media <- media;
+
+		FIM_SE
+	FIM_PARA
+	
+	PARA(cont <-0; cont <3; cont <- cont +1)FAÇA
+		media <- (aluno[cont].nota1+aluno[cont].nota2) / 2;
+
+		SE(media = maior_media) ENTÃO
+
+			ESCREVA("Nome do aluno e sua média: ")aluno[cont].nome
+			ESCREVA("Maior media: ", maior_media);
+		FIM_SE
+	FIM_PARA
+FIM
+=========================================================================================================================================================
+
+REGISTRO: tipo_atletas;
+	CARACTERE: nome, esporte;
+	INTEIRO: idade;
+	REAL: altura;
+FIM_REGISTRO
+
+ALGORITMO: ex3
+VAR
+	tipo_atletas: atleta[5];
+	INTEIRO: cont, mais_velho;
+	REAL: mais_alto
+INICIO
+	mais_velho <-0;
+	mais_alto  <-0; 
+	
+	PARA(cont <-0; cont <5; cont <- cont +1)FAÇA
+	
+		ESCREVA("Informe o nome: ");
+		LEIA(atleta[cont].nome);
+	
+		ESCREVA("Informe a idade: ");
+		LEIA(atleta[cont].idade);
+
+		ESCREVA("Informe a altura: ");
+		LEIA(atleta[cont].altura);
+
+		ESCREVA("Informe o esporte: ");
+ 		LEIA(atleta[cont].esporte);
+
+		
+		SE(altleta[cont].idade > mais_velho)ENTÃO
+			mais_velho <- altleta[cont].idade;
+		FIM_SE
+		
+		SE(altleta[cont].altura > mais_alto)ENTÃO
+			mais_alto <- altleta[cont].altura;
+		FIM_SE
+	FIM_PARA	
+	
+	PARA(cont <-0; cont <5; cont <- cont +1)FAÇA
+
+		SE(altleta[cont].idade = mais_velho)ENTÃO
+			ESCREVA("Altleta mais velho: ",  atleta[cont].nome);
+			ESCREVA("Idade: ", mais_velho);
+		FIM_SE
+
+		SE(altleta[cont].altura = mais_altura)ENTÃO
+			ESCREVA("Altleta mais alto: ",  atleta[cont].nome);
+			ESCREVA("Altura: ", mais_alto);
+		FIM_SE
+	FIM_PARA	
+FIM		
+=========================================================================================================================================================
+
+REGISTRO: tipo_compras
+	CARACTERE: nome;
+	INTEIRO: preco;
+FIM_REGISTRO
+	
+ALGORITMO: ex4
+VAR
+	tipo_compras: compra[5];
+	INTEIRO: conta, media;
+
+INICIO
+	media<-0;
+	PARA(cont<-0; cont <5; cont<-cont+1)FAÇA
+
+		ESCREVA("Informe o nome da loja: ");
+		LEIA(compra[cont].nome);
+
+		ESCREVA("Informe o preço do tablet: ");
+		LEIA(compra[cont].preço);
+		media<- media + compra[cont].preço;
+	FIM_PARA
+	
+	media<-media/5;
+	PARA(cont<-0; cont <5; cont<-cont+1)FAÇA
+		SE(compra[cont].preco < media) ENTÃO
+		ESCREVA("Loja com preço abaixo da média: ", compra[cont].nome);	
+		ESCREVA("Preço: ", compra[cont].preço);	
+		FIM_SE
+	FIM_PARA	
+FIM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

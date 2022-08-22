@@ -1,0 +1,114 @@
+-------------------MARCOS BAIRO-------------------------
+============= REPETIÇÃO - VETORES - MATRIZES ============
+
+
+===================REPETIÇÃO==============================
+
+ALGORITMO exercicio_01
+
+VAR
+	INTEIRO: num;
+INÍCIO
+	PARA(num<-0; num <= 100; num <- num+10) FAÇA
+	ESCREVA(num);  
+	FIM_PARA
+FIM
+--------------------------------------------------------
+
+ALGORITMO exercicio_02
+
+VAR
+	INTEIRO: num, soma, qdt_positivo;
+INÍCIO
+	qdt_positivo <-0;
+	soma <-0;
+	ENQUANTO (qdt_positivo <10)FAÇA
+		ESCREVA("Informe um número: ");
+		LEIA (num);
+		SE (num mod 2 = 0)ENTÃO
+			soma <- soma + num;
+			qdt_positivo <- qdt_positivo + 1;
+		FIM_SE					
+	FIM_ENQUANTO 
+	
+	ESCREVA("Média dos números positivos informados: ", soma/qdt_positivo);
+FIM
+-------------------------------------------------------
+
+
+===================VETORES==============================
+
+ALGORITMO exercicio_03
+
+VAR
+	INTEIRO: numeros[10], cont, x, y;
+INÍCIO
+	PARA(cont<-0; cont < 10; cont <- cont+1) FAÇA
+		ESCREVA ("Informe um número: ");
+		LEIA (numeros[cont]);
+	FIM_PARA
+	
+	ESCREVA("*Agora informe duas posições do índice (de 0 a 9) para realizar a soma entre eles*");
+	
+	ESCREVA("Informe a primeira posição desejada do índice: ");
+	LEIA(x);
+	ESCREVA("Informe a segunda posição desejada do índice: ");
+	LEIA(y);
+	
+	ESCREVA("A soma dos valores nas posições dos índices solicitados é: ", numeros[x] + numeros[y]);
+FIM
+--------------------------------------------------------
+
+ALGORITMO exercicio_04
+
+VAR
+	INTEIRO: numeros[10], cont, maior, menor, ind_maior, ind_menor;
+INÍCIO
+	cont<-0;
+	ESCREVA ("Informe um número: ");
+		LEIA (numeros[cont]); 
+	maior<-numeros[cont]; 
+	menor<-numeros[cont]; 
+	ind_maior <- cont;
+ 	ind_menor <- cont;
+
+	PARA(cont<-1; cont < 10; cont <- cont+1) FAÇA
+		ESCREVA ("Informe um número: ");
+		LEIA (numeros[cont]);
+		
+		SE( numeros[cont] > maior)ENTÃO
+			maior <- numeros[cont];
+			ind_maior <- cont;
+		FIM_SE
+
+		SE( numeros[cont] < menor)ENTÃO
+			menor <- numeros[cont];
+			ind_menor <- cont;
+		FIM_SE		
+	FIM_PARA
+
+	ESCREVA("O Maior número se encontra no índice: ", ind_maior);
+	ESCREVA("O Menor número se encontra no índice: ", ind_menor);
+FIM
+-------------------------------------------------------
+
+===================MATRIZES==============================
+
+
+ALGORITMO exercicio_05
+
+VAR
+	INTEIRO: numeros[5][5], linha, coluna, cont;
+INÍCIO
+	PARA(linha<-0; linha < 5; linha <- linha+1) FAÇA
+		PARA(coluna<-0; coluna <5; coluna <-coluna +1) FAÇA
+			ESCREVA("Informe um número: ");
+			LEIA(numeros[linha][coluna]);
+			
+			SE( (linha+coluna) mod 2 = 0) ENTÃO
+				ESCREVA("Elemento na posição PAR da soma entre Linha", linha, "e Coluna" coluna, ": ", numeros[linha][coluna]);
+			FIM_SE
+		FIM_PARA					
+	FIM_PARA
+FIM
+

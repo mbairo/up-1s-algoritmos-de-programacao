@@ -1,0 +1,113 @@
+ALGORITOMO vetor_01
+
+VAR
+	INTEIRO: num[10], quadrado[10], cont, num;
+INICIO
+	PARA (cont <-0; cont<10; cont + 1) FAÇA
+		ESCREVA("Informe um número: ");
+		LEIA(num);
+		num[cont] <- num;
+		quadrado[cont]<- POT(num,2);
+		ESCREVA("Número: ", num[cont]);
+		ESCREVA("Número ao quadradado: ", quadrado[cont]);
+	FIM_PARA
+FIM
+====================================
+ALGORITOMO vetor_02
+
+VAR
+	INTEIRO: num[10], cont, num;
+INICIO
+	PARA (cont <-0; cont<10; cont + 1) FAÇA
+		ESCREVA("Informe um número: ");
+		LEIA(num[cont]);
+	FIM_PARA
+	
+	PARA (cont <-9; cont>=0; cont - 1) FAÇA
+		ESCREVA("Número na odem inversa da digitada: ", num[cont]);
+	FIM_PARA
+FIM
+====================================
+ALGORITOMO vetor_10   // Exercício não pede, mas o ideal seria fazer dois ESCREVA, um para cada vetor.
+
+VAR
+	INTEIRO: a[10], b[10], c[10], cont, num;
+INICIO
+	PARA (cont <-0; cont<10; cont + 1) FAÇA
+		ESCREVA("Informe um número: ");
+		LEIA(a[cont]);
+		LEIA(b[cont]); // é possivel utilizar dois "LEIA"?
+		c[cont] <-a[cont];
+		c[cont+10] <-b[cont];
+	FIM_PARA
+FIM
+================================================================================================================================================================================================================================================
+================================================================================================================================================================================================================================================
+MATRIZ
+
+ALGORITMO matriz_01
+VAR
+	INTERIRO: matriz[3][4], linha, coluna, positivo, negativo, zero, cont;
+INICIO
+	positivo<-0;
+	negativo<-0;
+	zero<-0;
+	
+	PARA(linha <- 0; linha < 3; linha  linha + 1) FAÇA 
+  		PARA(coluna <- 0; coluna < 4; coluna  coluna + 1) FAÇA 
+			ESCREVA("Informe um número: ");
+			LEIA(matriz[linha][coluna]);
+
+			SE(matriz[linha]coluna] > 0) ENTÃO 
+   				   positivo <- positivo + 1; 
+ 		        	SENÃO SE(matriz[linha][coluna] < 0) ENTÃO 
+     						negativo <- negativo + 1; 
+   				 	SENÃO 
+    			 			 zero <- zero + 1; 
+   			        FIM_SE
+		       FIM_SE 
+FIM
+====================================
+ALGORITOMO vetor_10   // Exercício não pede, mas o ideal seria fazer dois ESCREVA, um para cada vetor.
+
+VAR
+	INTEIRO: matriz[3][3], linha, coluna, num, cont;
+INICIO
+	somaP<- 0;
+	somaS<- 0;
+	PARA (linha<-0; linha<3; linha <- linha+ 1) FAÇA
+		PARA (coluna<-0; coluna<3; coluna <- coluna + 1) FAÇA
+			ESCREVA("Informe um número: ");
+			LEIA(matriz[linha][coluna]);	
+		FIM_PARA
+		
+		somaP<- somaP + matriz[linha][linha]; 
+		somaS<- somaS + matriz[linha][2 - linha];		
+	FIM_PARA
+	
+	ESCREVA("A diferença é: ", somaP-somaS);
+FIM
+b[2][0]
+a[0][2]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+

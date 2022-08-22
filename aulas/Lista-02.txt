@@ -1,0 +1,520 @@
+LISTA DE EXERCÍCIOS - 1
+1.--------------
+1.1: Mensagem 1
+1.2: Msg 3, 4 e 5
+1.3: Msg 2 e 5
+1.4: a=F, b=V ou F, c= V ou F
+1.5: Não há possibilidades
+
+
+2.--------------
+
+1. ALGORITMO ordem_crescente
+VAR
+	INTEIRO: n1, n2;
+INICIO
+	ESCREVA("Informe o primeiro número: ");
+	LEIA(n1);
+	ESCREVA("Informe o segundo número: ");
+	LEIA(n2);
+	
+	SE (n1>n2) ENTÃO
+		ESCREVA(n2, "," n1);
+	SENÃO
+		ESCREVA(n1, "," n2);
+	FIM_SE
+FIM
+=========
+
+
+2. ALGORITMO resto_divisao
+VAR
+	Interiro: v1, v2, resto;
+INICIO
+	ESCREVA("Informe o primeiro valor: ");
+	LEIA(v1);
+	ESCREVA("Informe o segundo valor: ");
+	LEIA(v2);
+
+	SE(V1 > V2) ENTÃO
+		resto<- v1-v2;	
+	SENÃO
+		resto<- v2-v1;
+	FIM_SE
+	ESCREVA("A diferença é: " resto);
+FIM
+=========
+
+
+3. ALGORITMO absoluto
+VAR
+	INTEIRO: v1, abs;
+INICIO
+	ESCREVA("Informe o valor: ");
+	LEIA(v1);
+
+	SE(v1 < 0) ENTÃO
+		abs <- v1 * -1;
+	SENÃO
+		abs <- v1;
+	FIM_SE
+	ESCREVA("O valor absoluto é: ", abs);
+FIM
+=========
+
+
+4. ALGORITMO peso_ideal
+
+VAR
+	REAL: alt, peso_ideal;
+	CARACTER: sexo;
+INICIO
+	ESCREVA("Informe seu sexo (HOMEM ou MULHER): ");
+	LEIA(sexo);
+	ESCREVA("Informe a altura: ");
+	LEIA(alt);
+	
+	SE(sexo = "HOMEM") ENTÃO
+		peso_ideal <- 72.7 * alt -58;
+	SENÃO
+		peso_ideal <- 62.1 * alt -44.7;
+	FIM_SE
+	ESCREVA("Peso ideal: ", peso_ideal);
+FIM
+=========
+
+
+5. ALGORITMO votar_cnh
+
+VAR
+	INTEIRO: ano_atual, nascimento, idade;	
+INICIO
+	ESCREVA("Informe o ano atual: ");
+	LEIA(ano_atual);
+	ESCREVA("Informe o ano de nascimento: ");
+	LEIA(ano);
+	
+	idade<- ano_atual - nascimento;
+	SE(idade >=18) ENTÃO
+		ESCREVA("Já pode votar e tirar a CNH");
+	SENÃO SE(idade >= 16) ENTÃO
+			ESCREVA("Já pode votar, mas não pode tirar a CNH");
+		SENÃO
+			ESCREVA("Não pode dirigir e nem pode votar.");
+	       FIM_SE
+	FIM_SE
+FIM
+=========
+
+
+6. ALGORITMO divisivel_por2
+
+VAR
+	REAL: n;	
+INICIO
+	ESCREVA("Informe o número: ");
+	LEIA(n);
+	
+	SE(n MOD 2 = 0) ENTÃO
+		ESCREVA("É divisível por 2");
+	SENÃO
+		ESCREVA("Não é divisível por 2"); 
+	FIM_SE
+FIM
+=========
+
+
+7. ALGORITMO divisivel_por_2E3    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx resolução do CURSO ESTÁ ERRADA
+
+VAR
+	REAL: n;
+INICIO
+	ESCREVA("Informe o número: ");
+	LEIA(n);
+	
+	SE(n MOD 2 = 0 E n MOD 3 = 0) ENTÃO
+		ESCREVA("É divisível por 2 e 3");
+	SENÃO
+		ESCREVA("Não é divisível por 2 e  3 simultaneamente");
+	FIM_SE
+FIM
+=========
+
+
+8. ALGORITMO divisivel_por_2E7
+
+VAR
+	REAL: n;
+INICIO
+	ESCREVA("Informe o número: ");
+	LEIA(n);
+	
+	SE(n MOD 2 = 0 OU n MOD 7 = 0) ENTÃO
+		ESCREVA("É divisível por 2 ou por  7");
+	SENÃO
+		ESCREVA("Não é divisível por 2 e 7");
+	FIM_SE
+FIM
+=========
+
+
+9. ALGORITMO menor_dos3
+
+VAR
+	INTEIRO: n1, n2, n3;
+INICIO
+	ESCREVA("Informe o primeiro valor: ");
+	LEIA(n1);	
+	ESCREVA("Informe o segundo valor: ");
+	LEIA(n2);		
+	ESCREVA("Informe o terceiro valor: ");
+	LEIA(n3);
+
+	SE(n1<=n2 E n1<=n3) ENTÃO
+		ESCREVA("O menor númer é: ", n1);
+	SENÃO SE(n2<=n1 E n2<=n3) ENTÃO
+		ESCREVA("O menor númer é: ", n2);
+		SENÃO
+			ESCREVA("O meno número é: ", n3);
+	       FIM_SE	 
+	FIM_SE
+FIM
+=========
+
+
+10. ALGORITMO menor_maior
+
+VAR
+	INTEIRO: n1, n2;
+INICIO
+	ESCREVA(¨Informe o primeiro número: ¨);
+	LEIA(n1);
+	ESCREVA(¨Informe o segundo número: ¨);
+	LEIA(n2);
+	
+	SE(n1 mod n2 = 0) ENTÃO
+		ESCREVA("Estes números são divisíveis");
+	SENÃO SE(n2 mod n1 = 0) ENTÃO
+			ESCREVA("Estes números são divisíveis");
+		SENÃO
+			ESCREVA("Estes números não são divisíves");
+	       FIM_SE
+	FIM_SE
+		
+FIM
+=========
+
+
+11. ALGORITMO valor_produto    XXXXXXXXXXXXXXXXXXXXXXXX RESOLUÇÃO DA FACULDADE????????????
+VAR
+	REAL: protudo;
+	INTERIRO:cod;
+INICIO
+	ESCREVA("Informe o valor do produto: ");
+	LEIA(produto);
+	ESCREVA("Informe o codigo de pagamento: ");
+	LEIA(cod);
+	
+	SE(cod = 1) ENTÃO
+		produto <- produto - produto * 0,1;
+		ESCREVA("Valor que deve ser pago: ", produto);
+	SENÃO SE(cod =2 ) ENTÃO
+		produto <- produto - (produto * 0,05);
+		ESCREVA("Valor que deve ser pago: ", produto);
+		
+		SENÃO SE(cod = 3) ENTÃO
+			ESCREVA("Valor que deve ser pago: ", produto);
+			SENÃO
+			     produto<- produto + (produto*0.1);
+			     ESCREVA("Valor que deve ser pago: ", produto);
+		       FIM_SE	
+	        FIM_SE
+	FIM_SE
+FIM
+=========
+
+
+11 >>nova forma>>>> 11
+VAR
+	REAL: protudo;
+	INTERIRO:cod;
+INICIO
+	ESCREVA("Informe o valor do produto: ");
+	LEIA(produto);
+	ESCREVA("Informe o codigo de pagamento: ");
+	LEIA(cod);
+	
+	ESCOLHA(cod)
+		CASO 1:ESCREVA("Valor que deve ser pago: ", produto - produto * 0.1)// ou preço produto *0.9
+
+
+
+
+
+
+
+
+
+
+
+
+12. ALGORITMO calculos
+VAR
+	INTEIROS: n1, n2, resultado;
+	CARACTER: operacao;
+INICIO
+	ESCREVA:("Informe o primeiro número: ");
+	LEIA(n1);
+	ESCREVA:("Informe o segundo número: ");
+	LEIA(n2);
+	ESCREVA:("Informe forma operação aritmética: ");
+	LEIA(operacao);
+	
+	SE(operacao = "+") ENTÃO
+		resultado <- n1+n2;
+		SENÃO SE(operacao = "-") ENTÃO
+			resultado <- n1-n2;
+			SENÃO SE(operacao = "*") ENTÃO
+			resultado <- n1*n2;
+			SENÃO
+		  	   resultado <- n1*n2;
+			FIM_SE
+		FIM_SE
+	FIM_SE
+	ESCREVA("O resultado é: " resultado);			
+FIM
+=========
+nova forma 12 <<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+VAR
+	INTEIROS: n1, n2;
+	CARACTER: operacao;
+INICIO
+	ESCREVA:("Informe o primeiro número: ");
+	LEIA(n1);
+	ESCREVA:("Informe o segundo número: ");
+	LEIA(n2);
+	ESCREVA:("Informe forma operação aritmética: ");
+	LEIA(operacao);
+	
+	ESCOLHA(operação)
+		CASO "+": ESCREVA (n1+n2
+		.......
+		CASO_CONTRARIO: ESCREVA("Operação invalida");
+	FIM_ESCOLHA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13. ALGORITMO classificação
+
+VAR
+	CARACTER: cod;
+INICIO
+	ESCREVA("Informe o código: ");
+	LEIA(cod);
+	
+	SE(cod="1") ENTÃO
+		cod<-"Alimento não perecível";
+		SENÃO SE(cod="2")ENTÃO
+			cod<-"Alimento perecível";
+		        SENÃO SE(cod="3")ENTÃO
+				cod<-"Vestuario";
+				SENÃO SE(cod="4")ENTÃO
+			   		cod<-"Higiene pessoal";
+					SENÃO SE(cod="5")ENTÃO
+				   		cod<-"Limpeza e utensílios domésticos";
+						SENÃO SE(cod="6")ENTÃO
+				   			cod<-"Congelados";
+							SENÃO
+								cod<-"Inválido";
+						 FIM_SE
+					FIM_SE
+				FIM_SE
+
+			FIM_SE
+		FIM_SE
+	FIM_SE		                      
+FIM
+=========
+
+
+
+
+14. ALGORITMO dia_da_semana
+VAR
+	INTEIRO: dia;
+INICIO
+	ESCREVA("Informe o dia: ");
+	LEIA(dia);
+		
+	SE(dia=1)ENTÃO
+		ESCREVA("Domingo");
+		SENÃO SE(dia=2)ENTÃO
+			ESCREVA"Segunda"
+			SENÃO SE(dia=3)ENTÃO
+				ESCREVA"Terça"
+				SENÃO SE(dia=4)ENTÃO
+					ESCREVA"Quarta"
+					SENÃO SE(dia=5)ENTÃO
+						ESCREVA"Quinta"
+						SENÃO SE(dia=6)ENTÃO
+							ESCREVA"Sexta"
+							SENÃO SE(dia=7)ENTÃO
+								ESCREVA"Sabado"
+								SENÃO
+								     ESCREVA("Dia da semana inválido")
+
+		VARIOS FIM_SE....
+FIM
+=========
+
+15. ALGORITMO desconto_categoria
+VAR
+	REAL:cod, compra, valor_final;
+INICIO
+	
+	ESCREVA("Informe o seu código: ");
+	LEIA(cod);
+	ESCREVA("Informe o valor da compra: ");
+	LEIA(compra);
+	
+	SE(cod = 5)ENTÃO
+		valor_final <- compra - (compra*0.05);
+		SENÃO SE(cod = 10)ENTÃO
+			valor_final <- compra - (compra*0.1);
+		SENÃO
+			valor_final <- compra;
+		FIM_SE
+	FIM_SE
+	ESCREVA("Valor da compra: " valor_final);			
+FIM
+=========
+
+16. ALGORITMO par_impar   >>>>>>>>>>>>> DEVE ESTAR ERRADO
+VAR
+	INTEIRO: n;
+INICIO
+	ESCREVA("Informe o número: ");
+	LEIA(n);
+	
+	SE(n>=0 E n MOD 2 = 0)ENTÃO
+		ESCREVA("Par");
+	SENÃO SE(n>0 e n MOD 2 >0) ENTÃO  >>>>>>> ????
+			ESCREVA("Impar");
+			SENÃO
+			n<- n*-1
+			ESCREVA("n")
+	           FIM_SE
+	FIM_SE
+FIM
+>>>>>>>>>>>>>>>>>>>> NOVO MODO PROFESSOR
+16. ALGORITMO par_impar
+VAR
+	INTEIRO: num;
+INICIO
+	ESCREVA("Informe o número: ");
+	LEIA(num);
+	
+	SE(n>=0) ENTÃO
+		SE(num MOD 2 = 0) ENTÃO
+			ESCREVA("Número par.");
+		SENÃO		
+			ESCREVA("Número ímpar.");
+		FIM_SE
+	SENÃO
+		ESCREVA("Valor absoluto: " num * 1-);
+	FIM_SE
+
+E n MOD 2 = 0)ENTÃO
+		ESCREVA("Par");
+	SENÃO SE(n>0 e n MOD 2 >0) ENTÃO
+			ESCREVA("Impar");
+			SENÃO
+			n<- n*-1
+			ESCREVA("n")
+	           FIM_SE
+	FIM_SE
+FIM
+
+
+
+
+
+
+
+=========
+
+17. ALGORITMO linha_de_credito
+VAR
+	REAL: salario, prestacao, percentual;
+INICIO
+	ESCREVA("Informe o valor do salário bruto: ");
+	LEIA(salario);
+	ESCREVA("Informe o valor da prestação: ");
+	LEIA(prestacao);
+	
+	percentual<- salario*0.3;
+	SE(prestacao < percentrual)ENTÃO
+		ESCREVA("Emprestimo pode ser concedido");
+	SENÃO
+		ESCREVA("Emrestimo não pode ser concedido");
+	FIM_SE
+FIM
+=========
+
+18. ALGARITMO perguntas_crime
+VAR
+	INTEIRO: P1, P2, P3, P4, P5, total;	
+INICIO
+	ESCREVA("Telefonou para a vítima? 1 para positivo e 0 para negativo ");
+	LEIA(P1);
+	ESCREVA("Esteve no local do crime?");
+	LEIA(P2);
+	ESCREVA("Mora perto da vítima?");
+	LEIA(P3);
+	ESCREVA("Devia para a vítima?");
+	LEIA(P4);
+	ESCREVA("Já trabalhou com a vítima?");
+	LEIA(P5);	
+	
+	total<- p1+p2+p3+p4+p5;
+	SE(total=2) ENTÃO
+		ESCREVA("Suspeita");
+		SENÃO SE(total>=3 E total <=4) ENTÃO
+			ESCREVA("Cúmplice");
+			SENÃO SE(total=5)ENTÃO
+				ESCREVA("Assassino")
+				SENÃO
+				     ESCREVA("Inocente");
+			  FIM_SE
+	           FIM_SE	
+         FIM_SE			
+FIM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

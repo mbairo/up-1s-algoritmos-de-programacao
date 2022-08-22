@@ -1,0 +1,112 @@
+Atividade avaliativa -1
+
+Atividades de Introdução a algoritmos
+
+
+ALGORITMO exercicio_1
+
+VAR
+	REAL: num;
+INICIO
+	ESCREVA("Informe um número: ");
+	LEIA(num);
+	
+	SE(num>=0)ENTÃO
+		ESCREVA("Número ao quadrado: ", POT(num,2), "Número ao cubo: ", POT(num,3));
+	FIM_SE
+FIM
+
+----------------------------------------------------------------------------------------------------------------------
+
+ALGORITMO exercicio_2
+
+VAR
+	REAL: salario;
+INICIO
+	ESCREVA:("Informe o salário: ");
+	LEIA(salario);
+	
+	ESCREVA("Salário com aumento de 20%: ", salario+salario*0.2);
+FIM
+
+----------------------------------------------------------------------------------------------------------------------
+
+ALGORITMO exercicio_3
+
+VAR
+	REAL: salario, porcentagem;	
+INICIO
+	ESCREVA:("Informe o salário: ");
+	LEIA(salario);
+	ESCREVA:("Informe a porcentagem que deseja de aumento: ");
+	LEIA(porcentagem);
+	
+	ESCREVA:("O novo salário é: ", salario + salario*porcentagem/100);
+FIM
+
+----------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+Atividades de Condicionais
+
+ALGORITMO exercicio_4
+
+VAR
+	REAL: num1, num2;
+INICIO
+	ESCREVA("Informe o primeiro número: ");
+	LEIA(num1);
+	ESCREVA("Informe o segundo número: ");
+	LEIA(num2);
+	
+	SE(num1=num2)ENTÃO
+		ESCREVA("Números iguais");
+	SENÃO SE(num1>num2)ENTÃO
+		ESCREVA(num1);
+	      SENÃO
+		ESCREVA(num2);
+	   FIM_SE
+	FIM_SE
+FIM
+----------------------------------------------------------------------------------------------------------------------
+
+ALGORITMO exercicio_5
+
+VAR
+	INTEIRO: ano;	
+INICO
+	ESCREVA("Informe o ano: ");
+	LEIA(ano);
+	
+	SE(ano MOD 100 =0 E ano MOD 400 =0) ENTÃO
+		ESCREVA("Esse ano é bissexto");
+	SENÃO
+		ESCREVA("Esse ano não é bissexto");
+	FIM_SE
+FIM
+----------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,95 @@
+Marcos Bairo 
+=======================================================================================
+
+ALGORITMO exercicio_1
+VAR
+	INTEIRO: vetor_01[5], vetor_02[5], vetor_resultante[5], cont, num;
+INICIO
+
+	PARA(cont <- 0; cont <5; cont <- cont + 1)FAÇA
+		ESCREVA("Informe número para o primerio vetor: ");
+		LEIA(num);
+		vetor_01[cont] <- num;
+	FIM_PARA
+	
+	PARA(cont <- 0; cont <5; cont <- cont + 1)FAÇA
+		ESCREVA("Informe número para o segundo vetor: ");
+		LEIA(num);
+		vetor_02[cont] <- num;
+	FIM_PARA
+
+	
+	PARA(cont <- 0; cont <5; cont <- cont + 1)FAÇA
+		vetor_resultante[cont] <- vetor_01[cont] + vetor_02[cont];
+
+		ESCREVA("Soma dos valores de mesmo índice na possição/índice ", cont, ":", vetor_resultante[cont]);		
+	FIM_PARA
+FIM
+---------------------------------------------------------------------------------------
+*** Lógica está errada. Irei refazer da maneira simples...
+ALGORITMO exercicio_2
+VAR
+	INTEIRO: vetor[20], vetor2[20] lancamento, cont, cont_comparar, x;
+INICIO
+		
+	PARA(cont <- 0; cont <20; cont <- cont + 1)FAÇA
+		ESCREVA("Jogue o Dado e informe o número do resultado do lançamento: ");
+		LEIA(lancamento);
+		vetor[cont] <- lancamento;
+	FIM_PARA
+	
+	PARA(cont_comparar <- 0; cont_comparar <20; cont_comparar <- cont_comparar + 1)FAÇA
+		
+		x <- 0;
+		
+		PARA(cont <- cont_comparar + 1; cont <20; cont <- cont + 1)FAÇA
+			
+			
+			SE(vetor[cont_comparar] = vetor[cont])ENTÃO
+				x <- x + 1; 
+			FIM_SE
+							
+		vetor2[cont_comparar] <- vetor[cont_comparar];
+		FIM_PARA
+
+			SE(x != 0)ENTÃO
+				x <- x+1;
+			FIM_SE
+
+		PARA(cont_comparar <- cont_comparar; cont_comparar <20; cont_comparar <- cont_comparar + 1)FAÇA
+
+			SE(cont_comparar = 0 OU vetor[cont_comparar] != vetor2[cont_comparar])ENTÃO
+
+				ESCREVA("A face de número ", vetor[cont_comparar], "teve", x, "ocorrências");
+		
+			FIM_SE
+		FIM_PARA
+	FIM_PARA
+FIM
+---------------------------------------------------------------------------------------
+
+ALGORITMO exercicio_3
+VAR
+	INTEIRO: matriz[4][4], linha, coluna, num, soma;
+INICIO
+	soma<-0;
+	
+	PARA(linha <- 0; linha < 4; linha <- linha + 1) FAÇA 
+  		PARA(coluna <- 0; coluna < 4; coluna <- coluna + 1) FAÇA 
+  			 ESCREVA("Informe número: "); 
+  			 LEIA(num); 
+ 			 matriz[linha][coluna] <- num; 
+ 		FIM_PARA
+	FIM_PARA
+	
+	PARA(linha <- 0; linha < 4; linha <- linha + 1) FAÇA 
+  		PARA(coluna <- 0; coluna < 4; coluna <- coluna + 1) FAÇA 
+  			soma <- soma + matriz[linha][coluna];
+ 		 FIM_PARA 
+	 FIM_PARA 
+	ESCREVA("Soma de todos os elementos da matriz: ", soma);
+FIM
+---------------------------------------------------------------------------------------
+Exercicío 4
+Resposta: [0][0], [1][1], [2][2], [3][3], [4][4]
+
